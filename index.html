@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuraz Software</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <h3>
+        <span id="span-1">Kuraz</span><br />
+        <span id="span-2">Software</span>
+      </h3>
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button onclick="scrollToContact()">Contact me</button>
+    </nav>
+    <main>
+      <div id="main">
+        <h2 style="font-size: 17px; color: aliceblue;padding-top: 150px;">Hi, there!</h2>
+        <h1 style="font-size: 40px; color: aliceblue; padding-top: 25px">
+          I'm <span style="color: #13bbff">Bereket</span>
+          <span style="color: #13bbff">Getachew</span>
+        </h1>
+        <p
+          style="
+            font-size: 17px;
+            color: aliceblue;
+            padding-top: 20px;
+            line-height: 20px;
+          "
+        >
+          Experienced frontend web developer adept in crafting responsive & user friendly websites.
+        </p>
+      </div>
+      <div class="icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <br><button>Hire me</button>
+        <button>Download CV</button>
+      </div>
+
+
+      <!-----------------about------------------>
+      <div id="about">
+        <div id="about-img">
+            <img src="images/about.jpg"alt="">
+            <div id="about-txt">
+              <h1 style="font-size: 40px; color: aliceblue;margin-bottom: 30px;margin-top: 20px;">I am a <span  style="color: #13bbff;">Web Developer</span></h1><br>
+              <p>Experience: <span style="color: #13bbff;font-weight: 800;">3 Years</span></p>
+              <p>Speciality: <span style="color: #13bbff;font-weight: 800;">Front-End Web Developer</span></p>
+              <p>Adress: <span style="color: #13bbff;font-weight: 800;">Ethiopia, Addis Ababa</span></p>
+              <p>Email: <span style="color: #13bbff;font-weight: 800;">bakiget78@gmail.com</span></p>
+              <p>Phone: <span style="color: #13bbff;font-weight: 800;">+251 97 810 1611</span></p>
+              <button style="margin-top: 50PX;">View projects</button>
+
+            </div>
+        </div>
+      </div>
+
+      <!-----------------services------------------>
+
+
+      <div id="services">
+        <h1>My services</h1>
+        <div id="cards">
+            <div class="my-services">
+            <i class="fas fa-code"></i><br>
+            <h2>Front-End</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus adipisci, reiciendis inventore blanditiis voluptatibus possimus corporis! Officia provident in exercitationem magni, debitis eaque dolorem. Fugit sequi natus hic repellendus.</p>
+
+        </div>
+        <div class="my-services">
+            <i class="fas fa-server"></i><br>
+            <h2>Back-End</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus adipisci, reiciendis inventore blanditiis voluptatibus possimus corporis! Officia provident in exercitationem magni, debitis eaque dolorem. Fugit sequi natus hic repellendus.</p>
+
+        </div>
+        <div class="my-services">
+            <i class="fas fa-mobile"></i></i><br>
+            <h2>Mobile App</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus adipisci, reiciendis inventore blanditiis voluptatibus possimus corporis! Officia provident in exercitationem magni, debitis eaque dolorem. Fugit sequi natus hic repellendus.</p>
+
+        </div>
+        </div>
+      </div>
+
+       <!-----------------portfolio------------------>
+
+
+      <div id="portfolio">
+        <h1>My Portfolio</h1>
+        <div id="cards-portfolio">
+            <div class="my-portfolio">
+            <img src="images/port-2.jpg" alt="">
+            <h2>Front-End</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+        </div>
+        <div class="my-portfolio">
+            <img src="images/port-1.jpg" alt="">
+            <h2>Back-End</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        </div>
+        <div class="my-portfolio">
+            <img src="images/port-4.jpg" alt="">
+            <h2>Mobile App</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+        </div>
+        
+      </div>
+
+             <!-----------------portfolio------------------>
+
+       <div id="contact">
+        <h1>Contact Me</h1>
+        <form onsubmit="sendMail(); reset(); return false;">
+          <input id="name" type="text" placeholder="Your Name" required><br>
+          <input id="email" type="email" name="" id="" placeholder="Email Address..." required><br>
+          <input  id="message" type="text" placeholder="Write Message Here..."><br>
+          <button>Send Message</button>
+        </form>
+        
+       </div>
+       <footer>
+              <p>&copy; 2023 Kuraz software. All rights reserved.</p>
+        </footer>
+       
+    </main>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

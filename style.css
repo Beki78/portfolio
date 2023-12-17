@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nova+Square&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  font-family: Inter;
+}
+body {
+  background-color: #1b1f24;
+}
+#nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #1b1f24;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  animation: fadeInDown 1.3s ease-in-out;
+}
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#nav-bar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: 50px;
+}
+#nav-bar ul li a {
+  text-decoration: none;
+  margin-left: 40px;
+  color: aliceblue;
+  font-size: 15px;
+  position: relative;
+}
+
+#nav-bar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust the distance of the underline from the text */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #13bbff;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+}
+#nav-bar ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+#nav-bar h3 span {
+  font-family: Inter;
+  margin-left: 100px;
+  line-height: 0.5;
+}
+
+#span-1 {
+  font-size: 55px;
+  color: aliceblue;
+}
+
+#span-2 {
+  font-size: 20px;
+  color: #13bbff;
+}
+
+#nav-bar button {
+  color: #13bbff;
+  border: 1px solid #13bbff;
+  padding: 13px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #1b1f24;
+  transition: background-color 0.4s ease-in-out;
+  cursor: pointer;
+}
+#nav-bar button:hover {
+  background-color: #13bbff;
+  color: #1b1f24;
+}
+main {
+  background-image: url("images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+  height: 530px;
+  animation: fadeInDownmain 2s ease-in-out forwards;
+}
+@keyframes fadeInDownmain {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-3%);
+    opacity: 1;
+  }
+}
+#main {
+  margin-left: 170px;
+  width: 450px;
+  margin-top: 20px;
+}
+.icons {
+  margin-left: 170px;
+  margin-top: 20px;
+}
+.icons a i {
+  color: #13bbff;
+  background-color: #111316;
+  padding: 5px;
+  font-size: 17px;
+  border-radius: 50%;
+  margin-left: 7px;
+  transition: background-color 0.4s ease-in-out;
+}
+.icons a i:hover {
+  background-color: #13bbff;
+  color: #111316;
+}
+main button {
+  color: #13bbff;
+  border: 1px solid #13bbff;
+  padding: 7px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #1b1f24;
+  margin-right: 20px;
+  margin-top: 30px;
+  transition: background-color 0.4s ease-in-out;
+}
+main button:hover {
+  background-color: #13bbff;
+  color: #1b1f24;
+}
+
+/*    About   */
+#about {
+  margin-top: 78px;
+  background-color: #22282f;
+  height: 100%;
+}
+#about-img {
+  display: flex;
+  padding-top: 100px;
+}
+#about-img img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  margin-left: 150px;
+  border: 4px solid #13bbff;
+  animation: fadeInabt 6s ease-in-out forwards infinite;
+}
+@keyframes fadeInabt {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+#about-txt {
+  margin-left: 100px;
+}
+#about-txt h1 {
+  position: relative;
+}
+#about-txt h1 span::before,
+#about-txt h1 span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#about-txt h1 span::before {
+  background: #22282f;
+  animation: typewritter 4s steps(20) forwards infinite;
+}
+#about-txt h1 span::after {
+  width: 3px;
+  background: #111316;
+  animation: typewritter 4s steps(20) forwards infinite;
+}
+
+@keyframes typewritter {
+  to {
+    left: 100%;
+  }
+}
+
+#about-txt p {
+  color: aliceblue;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+/*    service   */
+
+#services {
+  height: 100%;
+}
+#services h1 {
+  text-align: center;
+  color: #13bbff;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 3rem;
+}
+#cards {
+  display: flex;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+.my-services:hover {
+  transform: scale(1.1);
+  border: 2px solid aliceblue;
+}
+.my-services {
+  border: 2px solid #13bbff;
+  margin: 0 30px;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #22282f;
+  transition: transform 0.5s ease-in-out;
+}
+.my-services i {
+  height: 40px;
+  width: 40px;
+  background-color: #13bbff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 35px;
+}
+.my-services h2 {
+  color: aliceblue;
+  font-size: 2em;
+}
+.my-services p {
+  color: aliceblue;
+  font-size: 13px;
+}
+
+/*    portfolio   */
+
+#portfolio {
+  height: 100%;
+  background-color: #22282f;
+}
+#cards-portfolio {
+  display: flex;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+.my-portfolio {
+  border: 2px solid #13bbff;
+  margin: 0 30px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #22282f;
+  transition: transform 0.5s ease-in-out;
+}
+.my-portfolio:hover {
+  transform: scale(1.1);
+  border: 2px solid aliceblue;
+}
+.my-portfolio img {
+  height: auto;
+  width: 100%;
+  background-color: #13bbff;
+  border-radius: 10px;
+}
+.my-portfolio h2 {
+  color: aliceblue;
+  font-size: 16px;
+}
+.my-portfolio p {
+  color: aliceblue;
+  font-size: 13px;
+}
+#portfolio h1 {
+  text-align: center;
+  color: #13bbff;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 3rem;
+  padding-top: 50px;
+}
+
+/*    contact   */
+
+#contact {
+  height: 100%;
+  background-color: #111316;
+}
+#contact form {
+  margin-left: 31%;
+}
+#contact form input {
+  padding: 12px;
+  border-radius: 5px;
+  outline: none;
+  margin: 5px 0;
+  width: 55%;
+  color: aliceblue;
+  background-color: #22282f;
+  border: 1px solid #13bbff;
+}
+#contact form input::placeholder {
+  color: rgb(148, 155, 160);
+}
+#contact form input:nth-of-type(3) {
+  padding-bottom: 100px;
+}
+
+/*    footer   */
+
+footer {
+  background-color: #22282f;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 15px;
+  color: aliceblue;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: #758b93;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#13bbff, #758b93, #13bbff);
+  border-radius: 10px;
+}
+
